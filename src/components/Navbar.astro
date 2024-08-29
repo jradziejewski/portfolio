@@ -1,0 +1,81 @@
+---
+import { IconButton } from '@/components/ui/iconButton';
+import Icon from './Icon.astro';
+---
+
+<nav class="w-full shadow-md">
+  <div class="mx-auto px-4 sm:px-6">
+    <div class="max-w-content mx-auto flex items-center justify-between h-16">
+      <div class="flex items-center justify-between w-full">
+        <a href="/" class="flex-shrink-0 text-2xl font-bold">/jradziejewski </a>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="/about" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100"
+              >About me</a
+            >
+            <a href="/projects" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100"
+              >My work</a
+            >
+            <a href="/contact" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100"
+              >Contact</a
+            >
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-2">
+          <IconButton class="bg-gray-100">
+            <Icon name="github" />
+          </IconButton>
+          <IconButton>
+            <Icon name="linkedin" />
+          </IconButton>
+        </div>
+      </div>
+      <div class="md:hidden">
+        <button
+          id="mobile-menu-button"
+          class="inline-flex items-center justify-center p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-300"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="md:hidden hidden">
+    <div class="max-w-content mx-auto px-2 pt-2 pb-3 space-y-1">
+      <a href="/about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100"
+        >About me</a
+      >
+      <a href="/projects" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100"
+        >My work</a
+      >
+      <a href="/contact" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100"
+        >Contact</a
+      >
+    </div>
+  </div>
+</nav>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>
