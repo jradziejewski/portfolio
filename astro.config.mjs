@@ -7,7 +7,9 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind({ applyBaseStyles: false }), react()],
-  site: "https://jradziejewski.github.io/",
+  site: "https://jradziejeski.github.io",
+  base: "portfolio",
+  output: "static",
   vite: {
     resolve: {
       alias: {
