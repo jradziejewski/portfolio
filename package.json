@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@radix-ui/react-avatar": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "astro": "^4.14.6",
     "lucide-react": "^0.436.0",

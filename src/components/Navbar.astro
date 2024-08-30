@@ -3,11 +3,14 @@ import { IconButton } from '@/components/ui/iconButton';
 import Icon from './Icon.astro';
 ---
 
-<nav class="w-full shadow-md">
+<nav
+  id="navbar"
+  class="w-full shadow-md fixed top-0 transition-transform duration-300 bg-white z-10"
+>
   <div class="mx-auto px-4 sm:px-6">
     <div class="max-w-content mx-auto flex items-center justify-between h-16">
       <div class="flex items-center justify-between w-full">
-        <a href="/" class="flex-shrink-0 text-2xl font-bold">/jradziejewski </a>
+        <a href="/" class="flex-shrink-0 text-2xl font-bold">/jradziejewski</a>
         <div class="hidden md:block">
           <div class="ml-10 flex items-baseline space-x-4">
             <a href="/about" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100"
@@ -70,6 +73,7 @@ import Icon from './Icon.astro';
 </nav>
 
 <script>
+  const navbar = document.getElementById('navbar');
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
 
@@ -78,4 +82,26 @@ import Icon from './Icon.astro';
       mobileMenu.classList.toggle('hidden');
     });
   }
+
+  let lastScrollTop = 0;
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // Scrolling down
+      navbar.style.transform = 'translateY(-100%)';
+    } else {
+      // Scrolling up
+      navbar.style.transform = 'translateY(0)';
+    }
+
+    lastScrollTop = scrollTop;
+  });
 </script>
+
+<style>
+  body {
+    padding-top: 4rem; /* Adjust this value to match your navbar height */
+  }
+</style>

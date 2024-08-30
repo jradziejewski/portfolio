@@ -1,0 +1,38 @@
+---
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from '@/components/ui/card';
+import { IconButton } from './ui/iconButton';
+import Icon from './Icon.astro';
+import { AvatarComponent } from '@/components/ui/AvatarComponent.jsx';
+---
+
+<Card className="flex flex-col items-center max-w-[350px]">
+  <CardHeader className="relative flex flex-col items-center lg:pt-24">
+    <AvatarComponent
+      client:load
+      className="lg:absolute lg:-top-16 w-36 h-36 shadow-lg"
+      src="https://scontent-waw2-1.xx.fbcdn.net/v/t39.30808-6/353459423_1608559256290865_517262703355204437_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=VqfuLsHSxTgQ7kNvgGIq6Eq&_nc_ht=scontent-waw2-1.xx&oh=00_AYCNdaaahHTOkCSMhxb5c6ewIxfJzpqIpjSRftLz0RFD4Q&oe=66D7CA77"
+      alt="Jakub Radziejewski"
+      fallbackText={'JR'}
+    />
+    <CardTitle>Jakub Radziejewski</CardTitle>
+    <CardDescription>Software Developer, Data Enthusiast</CardDescription>
+  </CardHeader>
+  <CardContent>
+    <p class="text-center">I turn complex data into insights and build seamless web experiences.</p>
+  </CardContent>
+  <CardFooter className="flex gap-4">
+    <IconButton class="bg-gray-100">
+      <Icon name="github" />
+    </IconButton>
+    <IconButton>
+      <Icon name="linkedin" />
+    </IconButton>
+  </CardFooter>
+</Card>
