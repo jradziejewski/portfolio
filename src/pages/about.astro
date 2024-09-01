@@ -1,0 +1,60 @@
+---
+import AboutCard from '@/components/AboutCard.astro';
+import TechnologyCard from '@/components/TechnologyCard.astro';
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout>
+  <div class="flex justify-around mt-14">
+    <div class="w-1/2">
+      <div>
+        <h1 class="text-4xl font-bold">2020...</h1>
+        <p>Graduated from high school</p>
+        <p>started pursuing Mechatronics Engineering degree</p>
+        <p>@ Wroclaw University of Science & Technology</p>
+      </div>
+      <div class="text-right">
+        <h1 class="text-4xl font-bold">...2021</h1>
+        <p>My first Computer Science class</p>
+        <p>Learning algorithms, data structures in C language</p>
+        <p>Learning OOP programming in C++</p>
+        <p>Learning computer engineering basics & low level programming in Assembler</p>
+      </div>
+      <div>
+        <h1 class="text-4xl font-bold">2022...</h1>
+        <p>Started specializing in front-end development</p>
+        <p>Buliding my first real-life web applications</p>
+        <p>Learning my first job as JavaScript developer @ Nokia</p>
+      </div>
+      <div class="text-right">
+        <h1 class="text-4xl font-bold">...2023</h1>
+        <p>Getting more into data engineering & analysis</p>
+        <p>Deciding to commit my passion to software full-time</p>
+        <p>switching my major to Business Informatics @ Wroclaw University of Business</p>
+      </div>
+      <div>
+        <h1 class="text-4xl font-bold">2024...</h1>
+        <p>Expanding my programming expertise in data analysis, databases & cloud computing</p>
+        <p>Interning @ Kaufland's Controlling Department to get hands-on experience with data</p>
+        <p>Bulding this website!</p>
+      </div>
+      <div class="text-right">
+        <h1 class="text-4xl font-bold">...future</h1>
+        <p>Constantly extending my expertise and doing what I love to do, which is...</p>
+        <p>...turning complex data into insights and building seamless web experiences</p>
+      </div>
+    </div>
+    <div class="w-1/3 mt-6 flex justify-center">
+      <AboutCard />
+    </div>
+  </div>
+  <div class="w-full h-[1px] bg-black mt-14 mb-6"></div>
+  <div>
+    <h1 class="text-4xl font-bold">Technologies I use</h1>
+    <div class="flex my-6 justify-center gap-9">
+      <TechnologyCard name="python" />
+      <TechnologyCard name="javascript" />
+      <TechnologyCard name="typescript" />
+    </div>
+  </div>
+</Layout>

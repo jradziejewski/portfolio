@@ -12,7 +12,7 @@ import Icon from './Icon.astro';
 import { AvatarComponent } from '@/components/ui/AvatarComponent.jsx';
 ---
 
-<Card className="flex flex-col items-center max-w-[350px]">
+<Card className="flex flex-col items-center max-w-[350px] h-[320px]">
   <CardHeader className="relative flex flex-col items-center lg:pt-24">
     <AvatarComponent
       client:load
@@ -25,7 +25,9 @@ import { AvatarComponent } from '@/components/ui/AvatarComponent.jsx';
     <CardDescription>Software Developer, Data Enthusiast</CardDescription>
   </CardHeader>
   <CardContent>
-    <p class="text-center">I turn complex data into insights and build seamless web experiences.</p>
+    <p class="text-center text-gray-500">
+      I turn complex data into insights and build seamless web experiences.
+    </p>
   </CardContent>
   <CardFooter className="flex gap-4">
     <IconButton class="bg-gray-100">

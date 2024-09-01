@@ -1,0 +1,11 @@
+---
+import { TechnologyCardComponent } from './ui/TechnologyCard';
+import Icon from './Icon.astro';
+
+// add name from props
+const { name } = Astro.props;
+---
+
+<TechnologyCardComponent client:load>
+  <Icon name={name} />
+</TechnologyCardComponent>
